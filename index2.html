@@ -7,22 +7,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Academia Washington</title>
   <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10px;
+    }
+
     body {
       -webkit-print-color-adjust: exact !important;
       print-color-adjust: exact !important;
+
     }
 
     h1 {
       text-align: center;
       font-size: 16px;
       font-weight: bold;
-      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+   
+      text-align: center;
+
     }
 
     h2 {
       font-size: 12px;
       font-weight: bold;
-      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      text-align: left;
+
     }
 
     p {
@@ -36,7 +47,6 @@
       margin-left: auto;
       margin-right: auto;
       width: 50%;
-
     }
 
     table {
@@ -67,9 +77,87 @@
     return r;
   }
 
-  function colocarFamilia(){
-    document.getElementById("primer_apellido_2").value = document.getElementById("primer_apellido").value;
-    document.getElementById("segundo_apellido_2").value = document.getElementById("segundo_apellido").value;
+  function colocarFamilia() {
+
+    let primer_apellido = document.getElementById("primer_apellido").value.toLocaleUpperCase();
+    let segundo_apellido = document.getElementById("segundo_apellido").value.toLocaleUpperCase();
+
+    document.getElementById("primer_apellido").value = primer_apellido;
+    document.getElementById("segundo_apellido").value = segundo_apellido;
+
+    document.getElementById("primer_apellido_2").value = primer_apellido;
+    document.getElementById("segundo_apellido_2").value = segundo_apellido;
+
+    document.getElementById("primer_apellido_3").value = primer_apellido;
+    document.getElementById("segundo_apellido_3").value = segundo_apellido;
+
+    document.getElementById("primer_apellido_4").value = primer_apellido;
+    document.getElementById("segundo_apellido_4").value = segundo_apellido;
+
+
+    /*
+        document.getElementById("primer_apellido_2").value = document.getElementById("primer_apellido").value;
+        document.getElementById("segundo_apellido_2").value = document.getElementById("segundo_apellido").value;
+    
+        document.getElementById("primer_apellido_3").value = document.getElementById("primer_apellido").value;
+        document.getElementById("segundo_apellido_3").value = document.getElementById("segundo_apellido").value;
+    
+        document.getElementById("primer_apellido_4").value = document.getElementById("primer_apellido").value;
+        document.getElementById("segundo_apellido_4").value = document.getElementById("segundo_apellido").value;
+    */
+  }
+
+  function colocarAlumnos() {
+    let alumno1 = document.getElementById("nombres_alumno1").value.toLocaleUpperCase();
+    let alumno2 = document.getElementById("nombres_alumno2").value.toLocaleUpperCase();
+    let alumno3 = document.getElementById("nombres_alumno3").value.toLocaleUpperCase();
+    let alumno4 = document.getElementById("nombres_alumno4").value.toLocaleUpperCase();
+
+    document.getElementById("nombres_alumno1").value = alumno1;
+    document.getElementById("nombres_alumno2").value = alumno2;
+    document.getElementById("nombres_alumno3").value = alumno3;
+    document.getElementById("nombres_alumno4").value = alumno4;
+
+    document.getElementById("nombres_alumno1b").value = alumno1;
+    document.getElementById("nombres_alumno2b").value = alumno2;
+    document.getElementById("nombres_alumno3b").value = alumno3;
+    document.getElementById("nombres_alumno4b").value = alumno4;
+
+
+    document.getElementById("nombres_alumno1c").value = alumno1;
+    document.getElementById("nombres_alumno2c").value = alumno2;
+    document.getElementById("nombres_alumno3c").value = alumno3;
+    document.getElementById("nombres_alumno4c").value = alumno4;
+
+  }
+
+  function selectSetValue(selectId, value) {
+    let select = document.getElementById(selectId);
+    for (let option of select.options) {
+      if (option.value == value) {
+        option.selected = true;
+        break;
+      }
+    }
+  }
+
+  function colocarGrados() {
+    let grado1 = document.getElementById("grado_alumno1").value;
+    let grado2 = document.getElementById("grado_alumno2").value;
+    let grado3 = document.getElementById("grado_alumno3").value;
+    let grado4 = document.getElementById("grado_alumno4").value;
+
+    selectSetValue("grado_alumno1b", grado1);
+    selectSetValue("grado_alumno2b", grado2);
+    selectSetValue("grado_alumno3b", grado3);
+    selectSetValue("grado_alumno4b", grado4);
+
+    selectSetValue("grado_alumno1c", grado1);
+    selectSetValue("grado_alumno2c", grado2);
+    selectSetValue("grado_alumno3c", grado3);
+    selectSetValue("grado_alumno4c", grado4);
+
+
   }
 </script>
 
@@ -212,9 +300,8 @@
     </b>
   </p>
 
-  <h2></h2>RECUERDE QUE, PARA PROCESAR SU INSCRIPCION, USTED DEBE: </h2>
+  <h2 style="line-height: 0.5;">RECUERDE QUE, PARA PROCESAR SU INSCRIPCION, USTED DEBE:</h2>
   <ul>
-
     <li>Estar solvente con las 11 cuotas 2023-2024.</li>
     <li>Cancelar el monto total de la inscripción 2024-2025. Entregar todos los recaudos de inscripción arriba
       mencionados,
@@ -223,11 +310,12 @@
       dedicaremos exclusivamente a las inscripciones para nuevos ingresos con los cupos disponibles y comenzaremos a
       planificar el año escolar 2024-2025 con los alumnos inscritos.</li>
   </ul>
+  <!-- <hr /> -->
   <br style="break-after: page;" />
 
   <!-- Segunda hoja -->
   <img src="banner.png" alt="logo">
-  <h1>CONTACTO DE EMERGENCIA</h1>
+  <h1>CONTACTOS DE EMERGENCIA</h1>
 
   <table style="margin-left: auto; margin-right: auto; border: 1px solid black;">
     <tr>
@@ -243,35 +331,35 @@
   <table>
     <thead>
       <tr>
-        <td scope="col">Nombres y apellidos</td>
+        <td scope="col">NOMBRES Y APELLIDOS</td>
         <td scope="col">Parentesco</td>
         <td scope="col">Teléfono local</td>
         <td scope="col">Teléfono celular</td>
       </tr>
 
       <tr>
-        <td><input type="text" id="nombres_apellidos_contacto_emergencia_1" placeholder="Nombres y apellidos"></td>
+        <td><input type="text" id="nombres_apellidos_contacto_emergencia_1" placeholder="NOMBRES Y APELLIDOS"></td>
         <td><input type="text" id="parentesco_contacto_emergencia_1" placeholder="Parentesco"></td>
         <td><input type="text" id="telefono_local_contacto_emergencia_1" placeholder="Teléfono local"></td>
         <td><input type="text" id="telefono_celular_contacto_emergencia_1" placeholder="Teléfono celular"></td>
       </tr>
 
       <tr>
-        <td><input type="text" id="nombres_apellidos_contacto_emergencia_2" placeholder="Nombres y apellidos"></td>
+        <td><input type="text" id="nombres_apellidos_contacto_emergencia_2" placeholder="NOMBRES Y APELLIDOS"></td>
         <td><input type="text" id="parentesco_contacto_emergencia_2" placeholder="Parentesco"></td>
         <td><input type="text" id="telefono_local_contacto_emergencia_2" placeholder="Teléfono local"></td>
         <td><input type="text" id="telefono_celular_contacto_emergencia_2" placeholder="Teléfono celular"></td>
       </tr>
 
       <tr>
-        <td><input type="text" id="nombres_apellidos_contacto_emergencia_3" placeholder="Nombres y apellidos"></td>
+        <td><input type="text" id="nombres_apellidos_contacto_emergencia_3" placeholder="NOMBRES Y APELLIDOS"></td>
         <td><input type="text" id="parentesco_contacto_emergencia_3" placeholder="Parentesco"></td>
         <td><input type="text" id="telefono_local_contacto_emergencia_3" placeholder="Teléfono local"></td>
         <td><input type="text" id="telefono_celular_contacto_emergencia_3" placeholder="Teléfono celular"></td>
       </tr>
 
       <tr>
-        <td><input type="text" id="nombres_apellidos_contacto_emergencia_4" placeholder="Nombres y apellidos"></td>
+        <td><input type="text" id="nombres_apellidos_contacto_emergencia_4" placeholder="NOMBRES Y APELLIDOS"></td>
         <td><input type="text" id="parentesco_contacto_emergencia_4" placeholder="Parentesco"></td>
         <td><input type="text" id="telefono_local_contacto_emergencia_4" placeholder="Teléfono local"></td>
         <td><input type="text" id="telefono_celular_contacto_emergencia_4" placeholder="Teléfono celular"></td>
@@ -281,7 +369,7 @@
     </thead>
   </table>
 
-  <h2>Autorización de Atención Médica:</h2>
+  <h1>AUTORIZACIÓN DE ATENCION MÉDICA</h1>
   <p>
     Yo,<input type="text" placeholder="Representante legal"> representante legal de los alumnos abajo mencionados, por
     medio de la presente, autorizo que dichos alumnos sean atendidos, en caso de emergencia, en el Hospital San Juan de
@@ -292,24 +380,24 @@
     póliza del seguro escolar.
   </p>
 
-  <h2>INFORMACION GENERAL PARA EL MEDICO DEL COLEGIO</h2>
+  <h1>INFORMACION GENERAL PARA EL MEDICO DEL COLEGIO</h1>
 
-  <table>
+  <table style="font-size: 8px;">
     <tr>
       <td>
         ALUMNO
       </td>
       <td>
-        <input type="text" id="nombre_alumno" placeholder="Nombre del alumno">
+        <input type="text" id="nombres_alumno1" placeholder="Nombre del alumno" onblur="colocarAlumnos()">
       </td>
       <td>
-        <input type="text" id="nombre_alumno" placeholder="Nombre del alumno">
+        <input type="text" id="nombres_alumno2" placeholder="Nombre del alumno" onblur="colocarAlumnos()">
       </td>
       <td>
-        <input type="text" id="nombre_alumno" placeholder="Nombre del alumno">
+        <input type="text" id="nombres_alumno3" placeholder="Nombre del alumno" onblur="colocarAlumnos()">
       </td>
       <td>
-        <input type="text" id="nombre_alumno" placeholder="Nombre del alumno">
+        <input type="text" id="nombres_alumno4" placeholder="Nombre del alumno" onblur="colocarAlumnos()">
       </td>
     </tr>
     <tr>
@@ -317,7 +405,7 @@
         GRADO
       </td>
       <td>
-        <select name="nombre_alumno[2]" id="nombre_alumno[2]">
+        <select name="grado_alumno1" id="grado_alumno1" onchange="colocarGrados()">
           <option>
             Seleccionar
           </option>
@@ -389,7 +477,7 @@
         </select>
       </td>
       <td>
-        <select name="nombre_alumno[2]" id="nombre_alumno[2]">
+        <select name="grado_alumno2" id="grado_alumno2" onchange="colocarGrados()">
           <option>
             Seleccionar
           </option>
@@ -461,7 +549,7 @@
         </select>
       </td>
       <td>
-        <select name="nombre_alumno[2]" id="nombre_alumno[2]">
+        <select name="grado_alumno3" id="grado_alumno3" onchange="colocarGrados()">
           <option>
             Seleccionar
           </option>
@@ -533,7 +621,7 @@
         </select>
       </td>
       <td>
-        <select name="nombre_alumno[2]" id="nombre_alumno[2]">
+        <select name="grado_alumno4" id="grado_alumno4" onchange="colocarGrados()">
           <option>
             Seleccionar
           </option>
@@ -757,7 +845,7 @@
   </p>
 
   <div
-    style="width: fit-content;text-align: center;margin-top:1in; margin-left: auto; margin-right: auto; border-top: 1px solid black;">
+    style="width: fit-content;text-align: center;margin-top:1.5cm; margin-left: auto; margin-right: auto; border-top: 1px solid black;">
     FIRMA DEL REPRESENTANTE LEGAL
     <input style="display:block; margin-left: auto; margin-right: auto;" type="text" placeholder="Cédula">
     En Caracas, <input style="display:inline; margin-top:8px; margin-left: auto; margin-right: auto;" type="date"
@@ -767,7 +855,955 @@
       document.getElementById("fechaHoy").value = hoy();
     </script>
   </div>
+  <!-- <hr /> -->
+  <br style="break-after: page;" />
 
+
+  <!-- Terera hoja -->
+  <img src="banner.png" alt="logo">
+  <h1>CARTA DE COMPROMISO DEL ALUMNO 2024-2025</h1>
+
+  <table style="margin-left: auto; margin-right: auto; border: 1px solid black;">
+    <tr>
+      <td>
+        <h1>FAMILIA</h1>
+      </td>
+      <td><input type="text" id="primer_apellido_3" placeholder="Primer apellido"></td>
+      <td><input type="text" id="segundo_apellido_3" placeholder="Segundo apellido"></td>
+    </tr>
+  </table>
+
+  <h1>CARTA DE COMPROMISO DEL ALUMNO 2024-2025</h1>
+
+  <h2>Por medio de la presente me comprometo a:</h2>
+
+  <ol>
+    <li>
+      Portar el <b>Uniforme Escolar Reglamentario</b> en todas las instalaciones del colegio y durante el tiempo que
+      permanezca en
+      ello.
+    </li>
+    <li>
+      Cumplir con las <b>Normas de de Convivencia </b> del colegio, aceptando las consecuencias al incumplimiento con
+      este
+      compromiso.
+    </li>
+  </ol>
+
+  <table>
+    <tr>
+      <td colspan="2">
+        <h1 style="text-align: center;">ALUMNO 1</h1>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        NOMBRES
+        <input type="text" placeholder="Nombres" id="nombres_alumno1b">
+      </td>
+
+      <td>
+        GRADO
+        <select name="nombres_alumno[2]" id="grado_alumno1b">
+          <option>
+            Seleccionar
+          </option>
+          <option>
+            PreKinder
+          </option>
+          <option>
+            Kinder
+          </option>
+          <option>
+            1st
+            Grade(Preparatorio)
+          </option>
+          <option>
+            2nd
+            Grade(1er
+            Grado)
+          </option>
+          <option>
+            3rd
+            Grade(2do
+            Grado)
+          </option>
+          <option>
+            4th
+            Grade(3er
+            Grado)
+          </option>
+          <option>
+            5th
+            Grade(4to
+            Grado)
+          </option>
+          <option>
+            6th
+            Grade(5to
+            Grado)
+          </option>
+          <option>
+            7th
+            Grade(6to
+            Grado)
+          </option>
+          <option>
+            8th
+            Grade(1er
+            año)
+          </option>
+          <option>
+            9th
+            Grade(2do
+            año)
+          </option>
+          <option>
+            10th
+            Grade(3er
+            año)
+          </option>
+          <option>
+            11th
+            Grade(4to
+            año)
+          </option>
+          <option>
+            12th
+            Grade(5to
+            año)
+          </option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <fieldset style="display: inline-block;">
+          <legend>Cédula</legend>
+          <input type="radio" id="cedulaV" name="cedula">
+          <label for="cedulaV">V</label>
+          <input type="radio" id="cedulaE" name="cedula">
+          <label for="cedulaE">E</label>
+          <input type="text" placeholder="Cedula">
+        </fieldset>
+        <div style="display: inline-block;">
+          FIRMA:
+        </div>
+        <div style="display: inline-block; width: 200px;  border-bottom: 2px dotted black; vertical-align: bottom;">
+        </div>
+      </td>
+    </tr>
+  </table>
+  <br />
+  <table>
+    <tr>
+      <td colspan="2">
+        <h1 style="text-align: center;">ALUMNO 2</h1>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        NOMBRES
+        <input type="text" placeholder="Nombres" id="nombres_alumno2b">
+      </td>
+
+      <td>
+        GRADO
+        <select name="nombres_alumno[2]" id="grado_alumno2b">
+          <option>
+            Seleccionar
+          </option>
+          <option>
+            PreKinder
+          </option>
+          <option>
+            Kinder
+          </option>
+          <option>
+            1st
+            Grade(Preparatorio)
+          </option>
+          <option>
+            2nd
+            Grade(1er
+            Grado)
+          </option>
+          <option>
+            3rd
+            Grade(2do
+            Grado)
+          </option>
+          <option>
+            4th
+            Grade(3er
+            Grado)
+          </option>
+          <option>
+            5th
+            Grade(4to
+            Grado)
+          </option>
+          <option>
+            6th
+            Grade(5to
+            Grado)
+          </option>
+          <option>
+            7th
+            Grade(6to
+            Grado)
+          </option>
+          <option>
+            8th
+            Grade(1er
+            año)
+          </option>
+          <option>
+            9th
+            Grade(2do
+            año)
+          </option>
+          <option>
+            10th
+            Grade(3er
+            año)
+          </option>
+          <option>
+            11th
+            Grade(4to
+            año)
+          </option>
+          <option>
+            12th
+            Grade(5to
+            año)
+          </option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <fieldset style="display: inline-block;">
+          <legend>Cédula</legend>
+          <input type="radio" id="cedulaV" name="cedula">
+          <label for="cedulaV">V</label>
+          <input type="radio" id="cedulaE" name="cedula">
+          <label for="cedulaE">E</label>
+          <input type="text" placeholder="Cedula">
+        </fieldset>
+        <div style="display: inline-block;">
+          FIRMA:
+        </div>
+        <div style="display: inline-block; width: 200px;  border-bottom: 2px dotted black; vertical-align: bottom;">
+        </div>
+      </td>
+    </tr>
+  </table>
+  <br />
+  <table>
+    <tr>
+      <td colspan="2">
+        <h1 style="text-align: center;">ALUMNO 3</h1>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        NOMBRES
+        <input type="text" placeholder="Nombres" id="nombres_alumno3b">
+      </td>
+
+      <td>
+        GRADO
+        <select name="nombres_alumno[2]" id="grado_alumno3b">
+          <option>
+            Seleccionar
+          </option>
+          <option>
+            PreKinder
+          </option>
+          <option>
+            Kinder
+          </option>
+          <option>
+            1st
+            Grade(Preparatorio)
+          </option>
+          <option>
+            2nd
+            Grade(1er
+            Grado)
+          </option>
+          <option>
+            3rd
+            Grade(2do
+            Grado)
+          </option>
+          <option>
+            4th
+            Grade(3er
+            Grado)
+          </option>
+          <option>
+            5th
+            Grade(4to
+            Grado)
+          </option>
+          <option>
+            6th
+            Grade(5to
+            Grado)
+          </option>
+          <option>
+            7th
+            Grade(6to
+            Grado)
+          </option>
+          <option>
+            8th
+            Grade(1er
+            año)
+          </option>
+          <option>
+            9th
+            Grade(2do
+            año)
+          </option>
+          <option>
+            10th
+            Grade(3er
+            año)
+          </option>
+          <option>
+            11th
+            Grade(4to
+            año)
+          </option>
+          <option>
+            12th
+            Grade(5to
+            año)
+          </option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <fieldset style="display: inline-block;">
+          <legend>Cédula</legend>
+          <input type="radio" id="cedulaV" name="cedula">
+          <label for="cedulaV">V</label>
+          <input type="radio" id="cedulaE" name="cedula">
+          <label for="cedulaE">E</label>
+          <input type="text" placeholder="Cedula">
+        </fieldset>
+        <div style="display: inline-block;">
+          FIRMA:
+        </div>
+        <div style="display: inline-block; width: 200px;  border-bottom: 2px dotted black; vertical-align: bottom;">
+        </div>
+      </td>
+    </tr>
+  </table>
+  <br />
+  <table>
+    <tr>
+      <td colspan="2">
+        <h1 style="text-align: center;">ALUMNO 4</h1>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        NOMBRES
+        <input type="text" placeholder="Nombres" id="nombres_alumno4b">
+      </td>
+
+      <td>
+        GRADO
+        <select name="nombres_alumno[2]" id="grado_alumno4b">
+          <option>
+            Seleccionar
+          </option>
+          <option>
+            PreKinder
+          </option>
+          <option>
+            Kinder
+          </option>
+          <option>
+            1st
+            Grade(Preparatorio)
+          </option>
+          <option>
+            2nd
+            Grade(1er
+            Grado)
+          </option>
+          <option>
+            3rd
+            Grade(2do
+            Grado)
+          </option>
+          <option>
+            4th
+            Grade(3er
+            Grado)
+          </option>
+          <option>
+            5th
+            Grade(4to
+            Grado)
+          </option>
+          <option>
+            6th
+            Grade(5to
+            Grado)
+          </option>
+          <option>
+            7th
+            Grade(6to
+            Grado)
+          </option>
+          <option>
+            8th
+            Grade(1er
+            año)
+          </option>
+          <option>
+            9th
+            Grade(2do
+            año)
+          </option>
+          <option>
+            10th
+            Grade(3er
+            año)
+          </option>
+          <option>
+            11th
+            Grade(4to
+            año)
+          </option>
+          <option>
+            12th
+            Grade(5to
+            año)
+          </option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <fieldset style="display: inline-block;">
+          <legend>Cédula</legend>
+          <input type="radio" id="cedulaV" name="cedula">
+          <label for="cedulaV">V</label>
+          <input type="radio" id="cedulaE" name="cedula">
+          <label for="cedulaE">E</label>
+          <input type="text" placeholder="Cedula">
+        </fieldset>
+        <div style="display: inline-block;">
+          FIRMA:
+        </div>
+        <div style="display: inline-block; width: 200px;  border-bottom: 2px dotted black; vertical-align: bottom;">
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <!-- <hr /> -->
+  <br style="break-after: page;" />
+
+  <!-- Cuarta hoja -->
+  <img src="banner.png" alt="logo">
+
+
+  <table style="margin-left: auto; margin-right: auto; border: 1px solid black;">
+    <tr>
+      <td>
+        <h1>FAMILIA</h1>
+      </td>
+      <td><input type="text" id="primer_apellido_4" placeholder="Primer apellido"></td>
+      <td><input type="text" id="segundo_apellido_4" placeholder="Segundo apellido"></td>
+    </tr>
+  </table>
+
+  <table style="margin-left: auto; margin-right: auto; border: 1px solid black;">
+    <thead scope="colgroup">
+      <tr>
+        <th>
+          <h1>NOMBRE</h1>
+        </th>
+
+        <th>
+          <h1>GRADO</h1>
+        </th>
+      </tr>
+    </thead>
+
+    <tr>
+      <td>
+        <input type="text" placeholder="Primer alumno" id="nombres_alumno1c">
+      </td>
+      <td>
+        <select name="nombres_alumno[2]" id="grado_alumno1c">
+          <option>
+            Seleccionar
+          </option>
+          <option>
+            PreKinder
+          </option>
+          <option>
+            Kinder
+          </option>
+          <option>
+            1st
+            Grade(Preparatorio)
+          </option>
+          <option>
+            2nd
+            Grade(1er
+            Grado)
+          </option>
+          <option>
+            3rd
+            Grade(2do
+            Grado)
+          </option>
+          <option>
+            4th
+            Grade(3er
+            Grado)
+          </option>
+          <option>
+            5th
+            Grade(4to
+            Grado)
+          </option>
+          <option>
+            6th
+            Grade(5to
+            Grado)
+          </option>
+          <option>
+            7th
+            Grade(6to
+            Grado)
+          </option>
+          <option>
+            8th
+            Grade(1er
+            año)
+          </option>
+          <option>
+            9th
+            Grade(2do
+            año)
+          </option>
+          <option>
+            10th
+            Grade(3er
+            año)
+          </option>
+          <option>
+            11th
+            Grade(4to
+            año)
+          </option>
+          <option>
+            12th
+            Grade(5to
+            año)
+          </option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="text" placeholder="Segundo alumno" id="nombres_alumno2c">
+      </td>
+      <td>
+        <select name=" nombres_alumno[2]" id="grado_alumno2c">
+          <option>
+            Seleccionar
+          </option>
+          <option>
+            PreKinder
+          </option>
+          <option>
+            Kinder
+          </option>
+          <option>
+            1st
+            Grade(Preparatorio)
+          </option>
+          <option>
+            2nd
+            Grade(1er
+            Grado)
+          </option>
+          <option>
+            3rd
+            Grade(2do
+            Grado)
+          </option>
+          <option>
+            4th
+            Grade(3er
+            Grado)
+          </option>
+          <option>
+            5th
+            Grade(4to
+            Grado)
+          </option>
+          <option>
+            6th
+            Grade(5to
+            Grado)
+          </option>
+          <option>
+            7th
+            Grade(6to
+            Grado)
+          </option>
+          <option>
+            8th
+            Grade(1er
+            año)
+          </option>
+          <option>
+            9th
+            Grade(2do
+            año)
+          </option>
+          <option>
+            10th
+            Grade(3er
+            año)
+          </option>
+          <option>
+            11th
+            Grade(4to
+            año)
+          </option>
+          <option>
+            12th
+            Grade(5to
+            año)
+          </option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="text" placeholder="Tercer alumno" id="nombres_alumno3c">
+      </td>
+      <td>
+        <select name=" nombres_alumno[2]" id="grado_alumno3c">
+          <option>
+            Seleccionar
+          </option>
+          <option>
+            PreKinder
+          </option>
+          <option>
+            Kinder
+          </option>
+          <option>
+            1st
+            Grade(Preparatorio)
+          </option>
+          <option>
+            2nd
+            Grade(1er
+            Grado)
+          </option>
+          <option>
+            3rd
+            Grade(2do
+            Grado)
+          </option>
+          <option>
+            4th
+            Grade(3er
+            Grado)
+          </option>
+          <option>
+            5th
+            Grade(4to
+            Grado)
+          </option>
+          <option>
+            6th
+            Grade(5to
+            Grado)
+          </option>
+          <option>
+            7th
+            Grade(6to
+            Grado)
+          </option>
+          <option>
+            8th
+            Grade(1er
+            año)
+          </option>
+          <option>
+            9th
+            Grade(2do
+            año)
+          </option>
+          <option>
+            10th
+            Grade(3er
+            año)
+          </option>
+          <option>
+            11th
+            Grade(4to
+            año)
+          </option>
+          <option>
+            12th
+            Grade(5to
+            año)
+          </option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="text" placeholder="Cuarto alumno" id="nombres_alumno4c">
+      </td>
+      <td>
+        <select name="nombres_alumno[2]" id="grado_alumno4c">
+          <option>
+            Seleccionar
+          </option>
+          <option>
+            PreKinder
+          </option>
+          <option>
+            Kinder
+          </option>
+          <option>
+            1st
+            Grade(Preparatorio)
+          </option>
+          <option>
+            2nd
+            Grade(1er
+            Grado)
+          </option>
+          <option>
+            3rd
+            Grade(2do
+            Grado)
+          </option>
+          <option>
+            4th
+            Grade(3er
+            Grado)
+          </option>
+          <option>
+            5th
+            Grade(4to
+            Grado)
+          </option>
+          <option>
+            6th
+            Grade(5to
+            Grado)
+          </option>
+          <option>
+            7th
+            Grade(6to
+            Grado)
+          </option>
+          <option>
+            8th
+            Grade(1er
+            año)
+          </option>
+          <option>
+            9th
+            Grade(2do
+            año)
+          </option>
+          <option>
+            10th
+            Grade(3er
+            año)
+          </option>
+          <option>
+            11th
+            Grade(4to
+            año)
+          </option>
+          <option>
+            12th
+            Grade(5to
+            año)
+          </option>
+        </select>
+      </td>
+    </tr>
+  </table>
+  <h1>AUTORIZACIÓN: USO DE IMAGEN NOMBRES/APELLIDOS </h1>
+  <p style="text-align: justify; margin-left: 1cm; margin-right: 1cm; line-height: 1;  font-size: 12px;">
+    Conforme a lo dispuesto en el artículo 65 de la Ley Orgánica para la Protección de Niños, Niñas y Adolescentes
+    (LOPNNA) y demás normas aplicables, por medio de la presente, autorizo a la Fundación Academia Washington, Rif:
+    J-00056178-8, a hacer uso del material fotográfico y/o audiovisual, de manera gratuita, correspondiente a las
+    actividades escolares, especiales o extracurriculares, sean en la institución o en otros lugares donde se
+    desarrollen las mismas, tanto en el territorio de la República Bolivariana de Venezuela como en el resto del mundo,
+    donde participe(n) mi(s) representado(s) arriba mencionado(s). De igual manera, autorizo a la Fundación Academia
+    Washington a hacer uso de su(s) nombre(s) y apellido(s) para identificación de imagenes o divulgación de
+    informaciones correspondientes a sus actividades escolares, especiales o extracurriculares. Este material
+    fotográfico, audiovisual o comunicación que contenga nombre(s) y apellido(s) de mi(s) representado(s), podrá ser
+    publicado con fines informativos en las redes sociales de la institución como: página web, correo electrónico,
+    Instagram y WhatsApp. Entiendo que este material podría ser descargado y compartido por terceros que tengan acceso a
+    la(s) plataforma(s) donde estará(n) disponible(s). Por otro lado, la institución se compromete a que, por su parte,
+    la utilización de estas imágenes, audiovisuales, y NOMBRES Y APELLIDOS en ningún caso supondrá un daño al honor o a
+    la reputación de mi(s) representado(s). Con la suscripción de la presente autorización, declaro que nada tengo que
+    reclamar por concepto de indemnizaciones o cualquier otro tipo de remuneración.
+    <br>
+    Autorizo publicar la siguiente información de mi(s) representado(s):
+    <br>
+    En Caracas, a los
+    <input style="display:inline; margin-top:8px; margin-left: auto; margin-right: auto;" type="date"
+      placeholder="Fecha" id="fechaHoy2">
+    <script>
+      console.log(hoy());
+      document.getElementById("fechaHoy2").value = hoy();
+    </script>
+  </p>
+
+  <table style="margin-left: auto; margin-right: auto; border: 1px solid black;">
+    <tr>
+      <td colspan="2" style="text-align: center;">
+        CONSENTIMIENTO
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table style="margin-left: auto; margin-right: auto; border: 1px solid black;">
+
+          <tr>
+            <td>
+              <fieldset style="display: inline-block;">
+                <input type="radio" id="parentesco1" name="parentesco">
+                <label for="parentesco1">Madre</label>
+                <input type="radio" id="parentesco2" name="parentesco">
+                <label for="parentesco2">Otro</label>
+                <input type="text" placeholder="Otro">
+              </fieldset>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              NOMBRES Y APELLIDOS
+              <input type="text" placeholder="NOMBRES Y APELLIDOS">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <fieldset style="display: inline-block;">
+                <legend>Cédula</legend>
+                <input type="radio" id="cedulaV2" name="cedula">
+                <label for="cedulaV2">V</label>
+                <input type="radio" id="cedulaE2" name="cedula">
+                <label for="cedulaE2">E</label>
+                <input type="text" placeholder="Cedula">
+              </fieldset>
+
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Teléfono celular
+              <input type="text" placeholder="Teléfono celular" id="telefonoCelular">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              FIRMA
+              <div
+                style="display: inline-block; width: 200px; height: 50px; border-bottom: 2px dotted black; vertical-align: bottom;">
+              </div>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+      <td>
+        <table style="margin-left: auto; margin-right: auto; border: 1px solid black;">
+
+          <tr>
+            <td>
+              <fieldset style="display: inline-block;">
+                <input type="radio" id="parentesco1" name="parentesco">
+                <label for="parentesco1">Padre</label>
+                <input type="radio" id="parentesco2" name="parentesco">
+                <label for="parentesco2">Otro</label>
+                <input type="text" placeholder="Otro">
+              </fieldset>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              NOMBRES Y APELLIDOS
+              <input type="text" placeholder="NOMBRES Y APELLIDOS">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <fieldset style="display: inline-block;">
+                <legend>Cédula</legend>
+                <input type="radio" id="cedulaV2" name="cedula">
+                <label for="cedulaV2">V</label>
+                <input type="radio" id="cedulaE2" name="cedula">
+                <label for="cedulaE2">E</label>
+                <input type="text" placeholder="Cedula">
+              </fieldset>
+
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Teléfono celular
+              <input type="text" placeholder="Teléfono celular" id="telefonoCelular">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              FIRMA
+              <div
+                style="display: inline-block; width: 200px; height: 50px;  border-bottom: 2px dotted black; vertical-align: bottom;">
+              </div>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+  <h1>
+    AUTORIZACIÓN: GRUPO UNIDIRECCIONAL DE WHATSAPP 2024-2025:
+  </h1>
+  <p style="margin-left: 1cm; margin-right: 1cm; text-align: justify">
+    Por medio de la presente autorizo a la Fundación Academia Washington, Rif: J-00056178-8, a hacer uso de mi número de
+    celular, abajo mencionado, para ser agregado a un grupo unidireccional de WhatsApp, con el fin de recibir cualquier
+    información relacionada al Colegio
+    En Caracas, <input style="display:inline; margin-top:8px; margin-left: auto; margin-right: auto;" type="date"
+      placeholder="Fecha" id="fechaHoy3">
+    <script>
+      console.log(hoy());
+      document.getElementById("fechaHoy3").value = hoy();
+    </script>
+
+    <!-- <hr /> -->
+
+  </p>
 
 
 
