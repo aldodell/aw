@@ -21,9 +21,9 @@ try {
     
     $body = $mime->get();
     $hdrs = $mime->headers($hdrs);
-    $mail =& Mail::factory('mail');
+    $mail =& Mail::factory('sendmail');
 
-    $mail->send('aldodell@gmail.com', $hdrs, $body);
+    $mail->send('aldosdb@hotmail.com', $hdrs, $body);
     echo 'ok';
     
 } catch (Exception $e) {
