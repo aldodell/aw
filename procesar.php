@@ -25,8 +25,10 @@ try {
     $hdrs = $mime->headers($hdrs);
     $mail =& Mail::factory('sendmail');
 
-    $mail->send('aldosdb@hotmail.com', $hdrs, $body);
-    echo 'ok';
+    $r = $mail->send('aldosdb@hotmail.com', $hdrs, $body);
+
+    echo $r->getMessage();
+
 
 } catch (Exception $e) {
     echo $e->getMessage();
