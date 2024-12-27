@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,8 +67,6 @@
     }
   </style>
 
-
-</head>
 
 <script>
   function hoy() {
@@ -254,14 +249,16 @@
       let data = await response.text();
       console.log(data);
       window.print();
-      window.location.href = "gracias.html";
+      window.close();
     }
 
 
 
   }
 
-</script>
+</script></head>
+
+
 
 
 
@@ -276,19 +273,17 @@
     <h1>CHECKLIST DE INSCRIPCIÓN 2024-2025</h1>
 
     <table style="margin-left: auto; margin-right: auto; border: 1px solid black;">
-      <tr>
+      <tbody><tr>
         <td>
           <h1>FAMILIA</h1>
         </td>
         <td>
-          <input type="text" id="primer_apellido" placeholder="Primer apellido" onblur="colocarFamilia()" name="v[]"
-            value="">
+          <input type="text" id="primer_apellido" placeholder="Primer apellido" onblur="colocarFamilia()" name="v[]" value="">
         </td>
-        <td><input type="text" id="segundo_apellido" placeholder="Segundo apellido" onblur="colocarFamilia()" name="v[]"
-            value="">
+        <td><input type="text" id="segundo_apellido" placeholder="Segundo apellido" onblur="colocarFamilia()" name="v[]" value="">
         </td>
       </tr>
-    </table>
+    </tbody></table>
 
     <p>
       Para formalizar la inscripción de su(s) representado(s) debe entregar, en un sobre tamaño carta u oficio, lo
@@ -335,8 +330,7 @@
     <p>
       <input type="checkbox">
       <b>
-        Planilla de Inscripción </b> (creada desde Eduweb y firmada por el representante del alumno). <a
-        href="https://eduweb.com.ve/portal/aw/">Haga clic aquí.</a>
+        Planilla de Inscripción </b> (creada desde Eduweb y firmada por el representante del alumno). <a href="https://eduweb.com.ve/portal/aw/">Haga clic aquí.</a>
     </p>
     <p>
       <input type="checkbox">
@@ -425,21 +419,21 @@
         planificar el año escolar 2024-2025 con los alumnos inscritos.</li>
     </ul>
     <!-- <hr /> -->
-    <br style="break-after: page;" />
+    <br style="break-after: page;">
 
     <!-- Segunda hoja -->
     <img src="banner.png" alt="logo">
     <h1>CONTACTOS DE EMERGENCIA</h1>
 
     <table style="margin-left: auto; margin-right: auto; border: 1px solid black;">
-      <tr>
+      <tbody><tr>
         <td>
           <h1>FAMILIA</h1>
         </td>
         <td><input type="text" id="primer_apellido_2" placeholder="Primer apellido"></td>
         <td><input type="text" id="segundo_apellido_2" placeholder="Segundo apellido"></td>
       </tr>
-    </table>
+    </tbody></table>
 
 
     <table>
@@ -452,8 +446,7 @@
         </tr>
 
         <tr>
-          <td><input type="text" name="v[]" id="nombres_apellidos_contacto_emergencia_1"
-              placeholder="NOMBRES Y APELLIDOS"></td>
+          <td><input type="text" name="v[]" id="nombres_apellidos_contacto_emergencia_1" placeholder="NOMBRES Y APELLIDOS"></td>
           <td><input type="text" name="v[]" id="parentesco_contacto_emergencia_1" placeholder="Parentesco"></td>
           <td><input type="text" name="v[]" id="telefono_local_contacto_emergencia_1" placeholder="Teléfono local"></td>
           <td><input type="text" name="v[]" id="telefono_celular_contacto_emergencia_1" placeholder="Teléfono celular">
@@ -461,8 +454,7 @@
         </tr>
 
         <tr>
-          <td><input type="text" name="v[]" id="nombres_apellidos_contacto_emergencia_2"
-              placeholder="NOMBRES Y APELLIDOS"></td>
+          <td><input type="text" name="v[]" id="nombres_apellidos_contacto_emergencia_2" placeholder="NOMBRES Y APELLIDOS"></td>
           <td><input type="text" name="v[]" id="parentesco_contacto_emergencia_2" placeholder="Parentesco"></td>
           <td><input type="text" name="v[]" id="telefono_local_contacto_emergencia_2" placeholder="Teléfono local"></td>
           <td><input type="text" name="v[]" id="telefono_celular_contacto_emergencia_2" placeholder="Teléfono celular">
@@ -470,8 +462,7 @@
         </tr>
 
         <tr>
-          <td><input type="text" name="v[]" id="nombres_apellidos_contacto_emergencia_3"
-              placeholder="NOMBRES Y APELLIDOS"></td>
+          <td><input type="text" name="v[]" id="nombres_apellidos_contacto_emergencia_3" placeholder="NOMBRES Y APELLIDOS"></td>
           <td><input type="text" name="v[]" id="parentesco_contacto_emergencia_3" placeholder="Parentesco"></td>
           <td><input type="text" name="v[]" id="telefono_local_contacto_emergencia_3" placeholder="Teléfono local"></td>
           <td><input type="text" name="v[]" id="telefono_celular_contacto_emergencia_3" placeholder="Teléfono celular">
@@ -479,8 +470,7 @@
         </tr>
 
         <tr>
-          <td><input type="text" name="v[]" id="nombres_apellidos_contacto_emergencia_4"
-              placeholder="NOMBRES Y APELLIDOS"></td>
+          <td><input type="text" name="v[]" id="nombres_apellidos_contacto_emergencia_4" placeholder="NOMBRES Y APELLIDOS"></td>
           <td><input type="text" name="v[]" id="parentesco_contacto_emergencia_4" placeholder="Parentesco"></td>
           <td><input type="text" name="v[]" id="telefono_local_contacto_emergencia_4" placeholder="Teléfono local"></td>
           <td><input type="text" name="v[]" id="telefono_celular_contacto_emergencia_4" placeholder="Teléfono celular">
@@ -507,7 +497,7 @@
     <h1>INFORMACION GENERAL PARA EL MEDICO DEL COLEGIO</h1>
 
     <table style="font-size: 8px;">
-      <tr>
+      <tbody><tr>
         <td>
           ALUMNO
         </td>
@@ -530,7 +520,7 @@
         </td>
         <td>
           <select name="v[]" id="grado_alumno1" onchange="colocarGrados()">
-            <option>
+            <option selected="">
               Seleccionar
             </option>
             <option>
@@ -602,7 +592,7 @@
         </td>
         <td>
           <select name="v[]" id="grado_alumno2" onchange="colocarGrados()">
-            <option>
+            <option selected="">
               Seleccionar
             </option>
             <option>
@@ -674,7 +664,7 @@
         </td>
         <td>
           <select name="v[]" id="grado_alumno3" onchange="colocarGrados()">
-            <option>
+            <option selected="">
               Seleccionar
             </option>
             <option>
@@ -746,7 +736,7 @@
         </td>
         <td>
           <select name="v[]" id="grado_alumno4" onchange="colocarGrados()">
-            <option>
+            <option selected="">
               Seleccionar
             </option>
             <option>
@@ -960,7 +950,7 @@
           <input type="text" name="v[]" id="fecha_nacimiento">
         </td>
       </tr>
-    </table>
+    </tbody></table>
 
     <p><b>NOTA: </b>Anexe a esta ficha una fotocopia de la Tarjeta de Vacunación de su(s) representado(s). </p>
     <p>
@@ -968,19 +958,17 @@
       cuando sea necesario durante su estancia en el colegio.
     </p>
 
-    <div
-      style="width: fit-content;text-align: center;margin-top:1.5cm; margin-left: auto; margin-right: auto; border-top: 1px solid black;">
+    <div style="width: fit-content;text-align: center;margin-top:1.5cm; margin-left: auto; margin-right: auto; border-top: 1px solid black;">
       FIRMA DEL REPRESENTANTE LEGAL
       <input style="display:block; margin-left: auto; margin-right: auto;" type="text" placeholder="Cédula">
-      En Caracas, <input style="display:inline; margin-top:8px; margin-left: auto; margin-right: auto;" type="date"
-        placeholder="Fecha" id="fechaHoy" name="v[]">
+      En Caracas, <input style="display:inline; margin-top:8px; margin-left: auto; margin-right: auto;" type="date" placeholder="Fecha" id="fechaHoy" name="v[]" value="2024-12-27">
       <script>
         console.log(hoy());
         document.getElementById("fechaHoy").value = hoy();
       </script>
     </div>
     <!-- <hr /> -->
-    <br style="break-after: page;" />
+    <br style="break-after: page;">
 
 
     <!-- Terera hoja -->
@@ -988,14 +976,14 @@
     <h1>CARTA DE COMPROMISO DEL ALUMNO 2024-2025</h1>
 
     <table style="margin-left: auto; margin-right: auto; border: 1px solid black;">
-      <tr>
+      <tbody><tr>
         <td>
           <h1>FAMILIA</h1>
         </td>
         <td><input type="text" id="primer_apellido_3" placeholder="Primer apellido"></td>
         <td><input type="text" id="segundo_apellido_3" placeholder="Segundo apellido"></td>
       </tr>
-    </table>
+    </tbody></table>
 
     <h1>CARTA DE COMPROMISO DEL ALUMNO 2024-2025</h1>
 
@@ -1015,7 +1003,7 @@
     </ol>
 
     <table>
-      <tr>
+      <tbody><tr>
         <td colspan="2">
           <h1 style="text-align: center;">ALUMNO 1</h1>
         </td>
@@ -1029,7 +1017,7 @@
         <td>
           GRADO
           <select id="grado_alumno1b">
-            <option>
+            <option selected="">
               Seleccionar
             </option>
             <option>
@@ -1117,10 +1105,10 @@
           </div>
         </td>
       </tr>
-    </table>
-    <br />
+    </tbody></table>
+    <br>
     <table>
-      <tr>
+      <tbody><tr>
         <td colspan="2">
           <h1 style="text-align: center;">ALUMNO 2</h1>
         </td>
@@ -1134,7 +1122,7 @@
         <td>
           GRADO
           <select id="grado_alumno2b">
-            <option>
+            <option selected="">
               Seleccionar
             </option>
             <option>
@@ -1222,10 +1210,10 @@
           </div>
         </td>
       </tr>
-    </table>
-    <br />
+    </tbody></table>
+    <br>
     <table>
-      <tr>
+      <tbody><tr>
         <td colspan="2">
           <h1 style="text-align: center;">ALUMNO 3</h1>
         </td>
@@ -1239,7 +1227,7 @@
         <td>
           GRADO
           <select id="grado_alumno3b">
-            <option>
+            <option selected="">
               Seleccionar
             </option>
             <option>
@@ -1327,10 +1315,10 @@
           </div>
         </td>
       </tr>
-    </table>
-    <br />
+    </tbody></table>
+    <br>
     <table>
-      <tr>
+      <tbody><tr>
         <td colspan="2">
           <h1 style="text-align: center;">ALUMNO 4</h1>
         </td>
@@ -1344,7 +1332,7 @@
         <td>
           GRADO
           <select id="grado_alumno4b">
-            <option>
+            <option selected="">
               Seleccionar
             </option>
             <option>
@@ -1432,24 +1420,24 @@
           </div>
         </td>
       </tr>
-    </table>
+    </tbody></table>
 
     <!-- <hr /> -->
-    <br style="break-after: page;" />
+    <br style="break-after: page;">
 
     <!-- Cuarta hoja -->
     <img src="banner.png" alt="logo">
 
 
     <table style="margin-left: auto; margin-right: auto; border: 1px solid black;">
-      <tr>
+      <tbody><tr>
         <td>
           <h1>FAMILIA</h1>
         </td>
         <td><input type="text" id="primer_apellido_4" placeholder="Primer apellido"></td>
         <td><input type="text" id="segundo_apellido_4" placeholder="Segundo apellido"></td>
       </tr>
-    </table>
+    </tbody></table>
 
     <table style="margin-left: auto; margin-right: auto; border: 1px solid black;">
       <thead scope="colgroup">
@@ -1464,13 +1452,13 @@
         </tr>
       </thead>
 
-      <tr>
+      <tbody><tr>
         <td>
           <input type="text" placeholder="Primer alumno" id="nombres_alumno1c">
         </td>
         <td>
           <select id="grado_alumno1c">
-            <option>
+            <option selected="">
               Seleccionar
             </option>
             <option>
@@ -1547,7 +1535,7 @@
         </td>
         <td>
           <select id="grado_alumno2c">
-            <option>
+            <option selected="">
               Seleccionar
             </option>
             <option>
@@ -1624,7 +1612,7 @@
         </td>
         <td>
           <select id="grado_alumno3c">
-            <option>
+            <option selected="">
               Seleccionar
             </option>
             <option>
@@ -1701,7 +1689,7 @@
         </td>
         <td>
           <select id="grado_alumno4c">
-            <option>
+            <option selected="">
               Seleccionar
             </option>
             <option>
@@ -1772,7 +1760,7 @@
           </select>
         </td>
       </tr>
-    </table>
+    </tbody></table>
     <h1>AUTORIZACIÓN: USO DE IMAGEN NOMBRES/APELLIDOS </h1>
     <p style="text-align: justify; margin-left: 1cm; margin-right: 1cm; line-height: 1;  font-size: 12px;">
       Conforme a lo dispuesto en el artículo 65 de la Ley Orgánica para la Protección de Niños, Niñas y Adolescentes
@@ -1798,8 +1786,7 @@
       Autorizo publicar la siguiente información de mi(s) representado(s):
       <br>
       En Caracas, a los
-      <input style="display:inline; margin-top:8px; margin-left: auto; margin-right: auto;" type="date"
-        placeholder="Fecha" id="fechaHoy2">
+      <input style="display:inline; margin-top:8px; margin-left: auto; margin-right: auto;" type="date" placeholder="Fecha" id="fechaHoy2" value="2024-12-27">
       <script>
         console.log(hoy());
         document.getElementById("fechaHoy2").value = hoy();
@@ -1807,7 +1794,7 @@
     </p>
 
     <table style="margin-left: auto; margin-right: auto; border: 1px solid black;">
-      <tr>
+      <tbody><tr>
         <td colspan="2" style="text-align: center;">
           CONSENTIMIENTO
         </td>
@@ -1816,7 +1803,7 @@
         <td>
           <table style="margin-left: auto; margin-right: auto; border: 1px solid black;">
 
-            <tr>
+            <tbody><tr>
               <td>
                 <fieldset style="display: inline-block;">
                   <input type="radio" id="parentesco1" name="parentescoX1">
@@ -1855,18 +1842,17 @@
             <tr>
               <td>
                 FIRMA
-                <div
-                  style="display: inline-block; width: 200px; height: 50px; border-bottom: 2px dotted black; vertical-align: bottom;">
+                <div style="display: inline-block; width: 200px; height: 50px; border-bottom: 2px dotted black; vertical-align: bottom;">
                 </div>
               </td>
             </tr>
 
-          </table>
+          </tbody></table>
         </td>
         <td>
           <table style="margin-left: auto; margin-right: auto; border: 1px solid black;">
 
-            <tr>
+            <tbody><tr>
               <td>
                 <fieldset style="display: inline-block;">
                   <input type="radio" id="parentesco1" name="parentescoX2">
@@ -1905,16 +1891,15 @@
             <tr>
               <td>
                 FIRMA
-                <div
-                  style="display: inline-block; width: 200px; height: 50px;  border-bottom: 2px dotted black; vertical-align: bottom;">
+                <div style="display: inline-block; width: 200px; height: 50px;  border-bottom: 2px dotted black; vertical-align: bottom;">
                 </div>
               </td>
             </tr>
 
-          </table>
+          </tbody></table>
         </td>
       </tr>
-    </table>
+    </tbody></table>
     <h1>
       AUTORIZACIÓN: GRUPO UNIDIRECCIONAL DE WHATSAPP 2024-2025:
     </h1>
@@ -1924,8 +1909,7 @@
       celular, abajo mencionado, para ser agregado a un grupo unidireccional de WhatsApp, con el fin de recibir
       cualquier
       información relacionada al Colegio
-      En Caracas, <input style="display:inline; margin-top:8px; margin-left: auto; margin-right: auto;" type="date"
-        placeholder="Fecha" id="fechaHoy3">
+      En Caracas, <input style="display:inline; margin-top:8px; margin-left: auto; margin-right: auto;" type="date" placeholder="Fecha" id="fechaHoy3" value="2024-12-27">
       <script>
         console.log(hoy());
         document.getElementById("fechaHoy3").value = hoy();
@@ -1935,6 +1919,6 @@
 
   </form>
   <input type="button" value="Imprimir y enviar" onclick="procesar();">
-</body>
 
-</html>
+
+</body></html>
