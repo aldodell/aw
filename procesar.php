@@ -13,10 +13,11 @@ try {
         'Subject' => 'Test mime message'
     );
     
-     /*
+     
     $mime = new Mail_mime(array('eol' => $crlf));   
     $mime->setTXTBody($text);
     $mime->setHTMLBody($html);
+    /*
     $body = $mime->get();
     $hdrs = $mime->headers($hdrs);
     $mail =& Mail::factory('mail');
