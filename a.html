@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia Washington</title>
+
+</head>
+
+<body>
+    <script>
+
+        function setValueAsAttribute(element) {
+            switch (element.nodeName.toLowerCase()) {
+                case "input":
+                    if (element.value != undefined && element.value != "") {
+                        element.setAttribute("value", element.value);
+                    }
+                    break;
+                case "select":
+                    for (let option of element.options) {
+                        if (option.value == element.value) {
+                            option.setAttribute("selected", "");
+                            break;
+                        }
+                    }
+                    break;
+            }
+
+
+        }
+
+        function recorrer(elemento) {
+            if (elemento.value != null) {
+                setValueAsAttribute(elemento);
+            }
+            if (elemento.children != null) {
+                for (let i = 0; i < elemento.children.length; i++) {
+                    recorrer(elemento.children[i]);
+                }
+            }
+        }
+
+        function imprimir_enviar() {
+            let raiz = document.getElementsByTagName("html")[0];
+            recorrer(raiz);
+            console.log(raiz.innerHTML);
+        }
+    </script>
+
+    <form method="post" action="b.php">
+        <input type="text" name="v[]">
+        <input type="text" name="v[]">
+        <input type="text" name="v[]">
+        <input type="submit">
+        <select name="v[]">
+            <option value="1">A</option>
+            <option value="2">B</option>
+            <option value="3">C</option>
+        </select>
+    </form>
+
+    <input type="button" value="Imprimir y enviar" onclick="imprimir_enviar();">
+</body>
+
+</html>
