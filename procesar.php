@@ -3,7 +3,7 @@ try {
     include 'Mail.php';
     include 'Mail/mime.php';
    
-    /*
+   
     $text = 'Text version of email';
     $html = file_get_contents("php://input");
     $html = "<!DOCTYPE html><html lang=\"en\">$html</html>";
@@ -13,8 +13,8 @@ try {
         'Subject' => 'Test mime message'
     );
     
-    $mime = new Mail_mime(array('eol' => $crlf));
-        
+     /*
+    $mime = new Mail_mime(array('eol' => $crlf));   
     $mime->setTXTBody($text);
     $mime->setHTMLBody($html);
     $body = $mime->get();
