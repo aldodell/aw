@@ -12,7 +12,7 @@
 <?php
 
 
-$files = scandir("../reportes", SCANDIR_SORT_DESCENDING);
+$files = scandir("../reportes", SCANDIR_SORT_ASCENDING);
 $output = '<H1>Reportes</H1><br>';
 foreach ($files as $file) {
     if ($file != '.' && $file != '..' && $file != 'index.php' && $file != 'banner.png') {
