@@ -240,6 +240,8 @@
   }
 
   async function procesar() {
+    let botonImprimir = document.getElementById("botonImprimir");
+    botonImprimir.style.visibility = "hidden";
     let raiz = document.getElementsByTagName("html")[0];
     recorrer(raiz);
     //console.log(raiz.innerHTML);
@@ -1921,7 +1923,22 @@
     <h1>
       AUTORIZACIÓN: GRUPO UNIDIRECCIONAL DE WHATSAPP 2024-2025:
     </h1>
-    <input type="checkbox" id="acepto" name="acepto">
+
+    <script>
+      function autorizar() {
+        let checkbox = document.getElementById("acepto");
+        let botonImprimir = document.getElementById("botonImprimir");
+        if (checkbox.checked) {
+          botonImprimir.disabled = false;
+        } else {
+          botonImprimir.disabled = true;
+        }
+
+      }
+    </script>
+
+
+    <input type="checkbox" id="acepto" name="acepto" onchange="autorizar()">
     <p style="margin-left: 1cm; margin-right: 1cm; text-align: justify">
       Por medio de la presente autorizo a la Fundación Academia Washington, Rif: J-00056178-8, a hacer uso de mi número
       de
@@ -1938,7 +1955,7 @@
     </p>
 
   </form>
-  <input type="button" value="Imprimir y enviar" onclick="procesar();">
+  <input type="button" value="Imprimir y enviar" onclick="procesar();" id="botonImprimir" disabled>
 </body>
 
 </html>
