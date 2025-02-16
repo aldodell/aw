@@ -68,6 +68,12 @@
     table tbody tr:nth-child(even) {
       background-color: rgb(164, 164, 164);
     }
+
+    .salto {
+      break-after: page;
+      display: block;
+      position: relative;
+    }
   </style>
 
 
@@ -276,161 +282,165 @@
 
   <form method="post" action="procesar.php">
 
-    <!-- Primera hoja -->
-    <img src="banner.png" alt="logo">
-    <h1>CHECKLIST DE INSCRIPCIÓN 2024-2025</h1>
+    <div class="salto">
+      <!-- Primera hoja -->
+      <img src="banner.png" alt="logo">
+      <h1>CHECKLIST DE INSCRIPCIÓN 2024-2025</h1>
 
-    <table style="margin-left: auto; margin-right: auto; border: 1px solid black;">
-      <tr>
-        <td>
-          <h1>FAMILIA</h1>
-        </td>
-        <td>
-          <input type="text" id="primer_apellido" placeholder="Primer apellido" onblur="colocarFamilia()" name="v[]"
-            value="">
-        </td>
-        <td><input type="text" id="segundo_apellido" placeholder="Segundo apellido" onblur="colocarFamilia()" name="v[]"
-            value="">
-        </td>
-      </tr>
-    </table>
+      <table style="margin-left: auto; margin-right: auto; border: 1px solid black;">
+        <tr>
+          <td>
+            <h1>FAMILIA</h1>
+          </td>
+          <td>
+            <input type="text" id="primer_apellido" placeholder="Primer apellido" onblur="colocarFamilia()" name="v[]"
+              value="">
+          </td>
+          <td><input type="text" id="segundo_apellido" placeholder="Segundo apellido" onblur="colocarFamilia()"
+              name="v[]" value="">
+          </td>
+        </tr>
+      </table>
 
-    <p>
-      Para formalizar la inscripción de su(s) representado(s) debe entregar, en un sobre tamaño carta u oficio, lo
-      siguiente:
-    </p>
+      <p>
+        Para formalizar la inscripción de su(s) representado(s) debe entregar, en un sobre tamaño carta u oficio, lo
+        siguiente:
+      </p>
 
-    <h2>
-      1. DOCUMENTOS POR FAMILIA:
-    </h2>
+      <h2>
+        1. DOCUMENTOS POR FAMILIA:
+      </h2>
 
-    <p>
-      <input type="checkbox">
-      <b>Ficha Médica y de Contacto</b> (firmada por el representante y con copia de tarjeta de vacunación).
-    </p>
+      <p>
+        <input type="checkbox">
+        <b>Ficha Médica y de Contacto</b> (firmada por el representante y con copia de tarjeta de vacunación).
+      </p>
 
-    <p>
-      <input type="checkbox">
-      <b>
-        Carta Compromiso del Alumno</b> (firmada por cada alumno desde PreKinder hasta 12th Grade).
-    </p>
+      <p>
+        <input type="checkbox">
+        <b>
+          Carta Compromiso del Alumno</b> (firmada por cada alumno desde PreKinder hasta 12th Grade).
+      </p>
 
-    <p>
-      <input type="checkbox">
-      <b>
-        Comprobante de pago de inscripción</b> (si su pago es en efectivo, debe pasar por administración).
-    </p>
+      <p>
+        <input type="checkbox">
+        <b>
+          Comprobante de pago de inscripción</b> (si su pago es en efectivo, debe pasar por administración).
+      </p>
 
-    <p>
-      <input type="checkbox">
-      <b>
-        Solvencia de SPRAW </b>(entregar en SPRAW el soporte de pago o su pago en efectivo para recibir la solvencia
-      que
-      debe agregar al sobre. Realizar su pago únicamente a las cuentas bancarias de SPRAW).
-    </p>
-    <p>
-      <input type="checkbox">
-      <b>
-        Solvencia de Extracátedra </b> (los que tienen a sus representados en actividades de Extracátedra deben agregar
-      al
-      sobre
-      una solvencia que será entregada el mismo día de la inscripción).
-    </p>
-    <h2>2. DOCUMENTOS POR ALUMNO REGULAR: </h2>
-    <p>
-      <input type="checkbox">
-      <b>
-        Planilla de Inscripción </b> (creada desde Eduweb y firmada por el representante del alumno). <a
-        href="https://eduweb.com.ve/portal/aw/">Haga clic aquí.</a>
-    </p>
-    <p>
-      <input type="checkbox">
-      <b>
-        Copia LEGIBLE de la cédula de identidad del alumno </b> (tamaño normal y recortada).
-    </p>
+      <p>
+        <input type="checkbox">
+        <b>
+          Solvencia de SPRAW </b>(entregar en SPRAW el soporte de pago o su pago en efectivo para recibir la solvencia
+        que
+        debe agregar al sobre. Realizar su pago únicamente a las cuentas bancarias de SPRAW).
+      </p>
+      <p>
+        <input type="checkbox">
+        <b>
+          Solvencia de Extracátedra </b> (los que tienen a sus representados en actividades de Extracátedra deben
+        agregar
+        al
+        sobre
+        una solvencia que será entregada el mismo día de la inscripción).
+      </p>
+      <h2>2. DOCUMENTOS POR ALUMNO REGULAR: </h2>
+      <p>
+        <input type="checkbox">
+        <b>
+          Planilla de Inscripción </b> (creada desde Eduweb y firmada por el representante del alumno). <a
+          href="https://eduweb.com.ve/portal/aw/">Haga clic aquí.</a>
+      </p>
+      <p>
+        <input type="checkbox">
+        <b>
+          Copia LEGIBLE de la cédula de identidad del alumno </b> (tamaño normal y recortada).
+      </p>
 
-    <p>
-      <input type="checkbox">
-      <b>
-        Resultados de las evaluaciones </b> (oftalmológica, auditiva y de lenguaje. Para alumnos que cursarán PreKinder,
-      Kinder
-      y
-      1st Grade).
-    </p>
+      <p>
+        <input type="checkbox">
+        <b>
+          Resultados de las evaluaciones </b> (oftalmológica, auditiva y de lenguaje. Para alumnos que cursarán
+        PreKinder,
+        Kinder
+        y
+        1st Grade).
+      </p>
 
-    <h2>
-      3. DOCUMENTOS POR ALUMNO NUEVO INGRESO (hermanos):
-    </h2>
+      <h2>
+        3. DOCUMENTOS POR ALUMNO NUEVO INGRESO (hermanos):
+      </h2>
 
-    <p>
-      <input type="checkbox">
-      <b>
-        Planilla de Inscripción </b> (creada desde Eduweb y firmada por el representante del alumno).
-      <a href="https://eduweb.com.ve/portal/aw/">Haga clic aquí.</a>
-    </p>
-    <p>
-      <input type="checkbox">
-      <b>
-        Dos(2) fotos tamaño carnet </b> (Identificadas con nombres, apellidos y año escolar a cursar).
-    </p>
+      <p>
+        <input type="checkbox">
+        <b>
+          Planilla de Inscripción </b> (creada desde Eduweb y firmada por el representante del alumno).
+        <a href="https://eduweb.com.ve/portal/aw/">Haga clic aquí.</a>
+      </p>
+      <p>
+        <input type="checkbox">
+        <b>
+          Dos(2) fotos tamaño carnet </b> (Identificadas con nombres, apellidos y año escolar a cursar).
+      </p>
 
-    <p>
-      <input type="checkbox">
-      <b>
-        Copia de la cédula de identidad del alumno </b> (tamaño normal y recortada).
-    </p>
+      <p>
+        <input type="checkbox">
+        <b>
+          Copia de la cédula de identidad del alumno </b> (tamaño normal y recortada).
+      </p>
 
-    <p>
-      <input type="checkbox">
-      <b>
-        Copia de la cédula cada representante </b> (tamaño normal y recortadas).
-    </p>
+      <p>
+        <input type="checkbox">
+        <b>
+          Copia de la cédula cada representante </b> (tamaño normal y recortadas).
+      </p>
 
-    <p>
-      <input type="checkbox">
-      <b>
-        Resultados de las evaluaciones </b> (oftalmológica, auditiva y de lenguaje para PreK, K y 1st Grade). Si ya
-      fueron
-      entregados en la evaluación de admisión, no es necesario incluirlas en el sobre.
-    </p>
+      <p>
+        <input type="checkbox">
+        <b>
+          Resultados de las evaluaciones </b> (oftalmológica, auditiva y de lenguaje para PreK, K y 1st Grade). Si ya
+        fueron
+        entregados en la evaluación de admisión, no es necesario incluirlas en el sobre.
+      </p>
 
-    <p>
-      <input type="checkbox">
-      <b>
-        Copia LEGIBLE de la partida de nacimiento.
-      </b>
-    </p>
+      <p>
+        <input type="checkbox">
+        <b>
+          Copia LEGIBLE de la partida de nacimiento.
+        </b>
+      </p>
 
-    <p>
-      <input type="checkbox">
-      <b>
-        Boleta de promoción (Primaria) o Certificación de calificaciones (Media General).
-      </b>
-    </p>
-    <p>
-      <input type="checkbox">
-      <b>
-        Solvencia Administrativa </b> (del colegio de procedencia).
-    </p>
-    <p>
-      <input type="checkbox">
-      <b>
-        Dos(2) cartas de recomendación (de docentes del colegio de procedencia - Media General).
-      </b>
-    </p>
+      <p>
+        <input type="checkbox">
+        <b>
+          Boleta de promoción (Primaria) o Certificación de calificaciones (Media General).
+        </b>
+      </p>
+      <p>
+        <input type="checkbox">
+        <b>
+          Solvencia Administrativa </b> (del colegio de procedencia).
+      </p>
+      <p>
+        <input type="checkbox">
+        <b>
+          Dos(2) cartas de recomendación (de docentes del colegio de procedencia - Media General).
+        </b>
+      </p>
 
-    <h2 style="line-height: 0.5;">RECUERDE QUE, PARA PROCESAR SU INSCRIPCION, USTED DEBE:</h2>
-    <ul>
-      <li>Estar solvente con las 11 cuotas 2023-2024.</li>
-      <li>Cancelar el monto total de la inscripción 2024-2025. Entregar todos los recaudos de inscripción arriba
-        mencionados,
-        completos y firmados.</li>
-      <li>Una vez finalizado este proceso (jueves, 4 de julio) para alumnos regulares y hermanos, nos
-        dedicaremos exclusivamente a las inscripciones para nuevos ingresos con los cupos disponibles y comenzaremos a
-        planificar el año escolar 2024-2025 con los alumnos inscritos.</li>
-    </ul>
-    <!-- <hr /> -->
-    <br style="break-after: page;" />
+      <h2 style="line-height: 0.5;">RECUERDE QUE, PARA PROCESAR SU INSCRIPCION, USTED DEBE:</h2>
+      <ul>
+        <li>Estar solvente con las 11 cuotas 2023-2024.</li>
+        <li>Cancelar el monto total de la inscripción 2024-2025. Entregar todos los recaudos de inscripción arriba
+          mencionados,
+          completos y firmados.</li>
+        <li>Una vez finalizado este proceso (jueves, 4 de julio) para alumnos regulares y hermanos, nos
+          dedicaremos exclusivamente a las inscripciones para nuevos ingresos con los cupos disponibles y comenzaremos a
+          planificar el año escolar 2024-2025 con los alumnos inscritos.</li>
+      </ul>
+      <!-- <hr /> -->
+      <!--div style="position: relative;page-break-after: always;  break-after: page;"></div -->
+    </div>
 
     <!-- Segunda hoja -->
     <img src="banner.png" alt="logo">
