@@ -1971,26 +1971,27 @@
         }
       </script>
 
-
-      <input type="checkbox" id="acepto" name="acepto" onchange="autorizar()">
-      <p style="margin-left: 1cm; margin-right: 1cm; text-align: justify">
-        Por medio de la presente autorizo a la Fundación Academia Washington, Rif: J-00056178-8, a hacer uso de mi
-        número
-        de
-        celular, abajo mencionado, para ser agregado a un grupo unidireccional de WhatsApp, con el fin de recibir
-        cualquier
-        información relacionada al Colegio
-        En Caracas, <input style="display:inline; margin-top:8px; margin-left: auto; margin-right: auto;" type="date"
-          placeholder="Fecha" id="fechaHoy3">
-        <script>
-          console.log(hoy());
-          document.getElementById("fechaHoy3").value = hoy();
-        </script>
-        <!-- <hr /> -->
-      </p>
+      <div style="display: inline-block; border: 2px solid black; box-shadow: 2px 2px 2px 2px gray;" >
+        
+        <p style="display:inline-block; margin-left: 1cm; margin-right: 1cm; text-align: justify">
+          <input style="display: inline-block;" type="checkbox" id="acepto" name="acepto" onchange="autorizar()">
+          &#8592; Al hacer clic en este checkbox, autorizo a la Fundación Academia Washington, Rif: J-00056178-8, a hacer uso de mi
+          número
+          de
+          celular, abajo mencionado, para ser agregado a un grupo unidireccional de WhatsApp, con el fin de recibir
+          cualquier
+          información relacionada al Colegio
+          En Caracas, <input style="display:inline; margin-top:8px; margin-left: auto; margin-right: auto;" type="date"
+            placeholder="Fecha" id="fechaHoy3">
+          <script>
+            console.log(hoy());
+            document.getElementById("fechaHoy3").value = hoy();
+          </script>
+          <input style="margin:8px;" type="button" value="Imprimir y enviar" onclick="procesar();" id="botonImprimir" disabled>
+        </p>
+      </div>
 
   </form>
-  <input type="button" value="Imprimir y enviar" onclick="procesar();" id="botonImprimir" disabled>
   </div>
 </body>
 
